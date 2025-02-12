@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: backend
+    env: java
+    buildCommand: "./mvnw clean install"
+    startCommand: "java -jar target/*.jar"
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        value: "jdbc:postgresql://airplanedb_user:9YiWeUxWqB63npgz9Js8FQdgSXV8x2bw@dpg-cum9mr1u0jms73bm7bmg-a/airplanedb"
+      - key: SPRING_DATASOURCE_USERNAME
+        value: "airplanedb_user"
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: "9YiWeUxWqB63npgz9Js8FQdgSXV8x2bw"
